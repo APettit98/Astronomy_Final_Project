@@ -129,15 +129,19 @@ char correct_multiple_choice_answers[NUM_QUESTIONS] =
 static int questions_used[NUM_QUESTIONS];
 static int question_number = 1;
 
-char *get_question(){
-  int q_index = 1 + rand() % NUM_QUESTIONS;
-  if(!check_used(q_index)){
-    char *question = questions[(q_index - 1)];
-    questions_used[question_number] = q_index;
+char *get_question(int index){
+    char *question = questions[(index - 1)];
+    questions_used[question_number] = index;
     question_number ++;
     return question;
-  }
-  return get_question();
+}
+
+int get_index(){
+  int q_index = 1 + rand() % NUM_QUESTIONS;
+    if(!check_used(q_index)){
+      return q_index;
+    }
+  return get_index();
 }
 
 bool check_used(int index){
@@ -147,6 +151,15 @@ bool check_used(int index){
     }
   }
   return false;
+}
+
+bool check_correct(char answer, int index){
+  if(answer == correct_multiple_choice_answers[index - 1]){
+    return false;
+  }
+  else{
+    return true;
+  }
 }
 
 void print_choices(int index){
