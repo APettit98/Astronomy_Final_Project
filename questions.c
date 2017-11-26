@@ -29,6 +29,103 @@ char answers[NUM_QUESTIONS][MAX_Q_LENGTH] =
    "Fall of terrestrial bodies and motion of celestial bodies",
    "Copernicus"};
 
+char multiple_choice_answers[NUM_QUESTIONS][MAX_Q_LENGTH][NUM_CHOICES][MAX_Q_LENGTH] =
+  {
+    {
+      {"Eratosthenes"},
+      {"Aristarchus"},
+      {"Pythagoras"},
+      {"Aristotle"}
+    },
+    {
+      {"Eratosthenes"},
+      {"Pythagoras"},
+      {"Aristarchus"},
+      {"Aristotle"}
+    },
+    {
+      {"Pythagoras"},
+      {"Aristotle"},
+      {"Eratosthenes"},
+      {"Aristarchus"}
+    },
+    {
+      {"10 degrees"},
+      {"1/2 degree"},
+      {"90 degrees"},
+      {"2 degrees"}
+    },
+    {
+      {"Rotation, Revolution, and Spin"},
+      {"Orbit, Revolution, and Wobble"},
+      {"Rotation, Revolution, and Precession"},
+      {"Spin, Wobble, and Rotation"}
+    },
+    {
+      {"Tilt along the spin/rotational axis"},
+      {"Oribal eccentricity"},
+      {"Tidal forces exterted by Luna"},
+      {"Distance the Earth is away from Sol"}
+    },
+    {
+      {"Sunrise to sunset"},
+      {"Time between successive noons or midnights"},
+      {"Time between successive rising of a distant star"},
+      {"Time between successive full moons"}
+    },
+    {
+      {"Sunrise to sunset"},
+      {"Time between successive noons or midnights"},
+      {"Time between successive rising of a distant star"},
+      {"Time between successive full moons"}
+    },
+    {
+      {"23 hours"},
+      {"12 hours"},
+      {"23 hours 56 minutes"},
+      {"24 hours"}
+    },
+    {
+      {"23 hours"},
+      {"12 hours"},
+      {"23 hours 56 minutes"},
+      {"24 hours"}
+    },
+    {
+      {"Orbital eccentricity and spin tilt"},
+      {"Tidal forces from Sol and Luna"},
+      {"Orbital eccentricity and tidal forces"},
+      {"Spin tilt and rotational velocity"}
+    },
+    {
+      {"Earth's shadow is projected on Luna"},
+      {"Luna's shadow is projected on Earth"},
+      {"Sol's shadow is projected on Luna"},
+      {"Earth's shadow is projected on Earth"}
+    },
+    {
+      {"Earth's shadow is projected on Luna"},
+      {"Luna's shadow is projected on Earth"},
+      {"Sol's shadow is projected on Luna"},
+      {"Earth's shadow is projected on Earth"}
+    },
+    {
+      {"Cause of Earth's seasons and the cause of Earth's tides"},
+      {"Chemical composition of Sol and chemical composition of Luna"},
+      {"Formation of Earth and possibility of alien life"},
+      {"Fall of terrestrial bodies and motion of celestial bodies"}
+    },
+    {
+      {"Brahe"},
+      {"Galileo"},
+      {"Copernicus"},
+      {"Newton"}
+    }
+  };
+
+char correct_multiple_choice_answers[NUM_QUESTIONS] =
+  {'a', 'c', 'd', 'b', 'c', 'a', 'b', 'c', 'd', 'c', 'a', 'b', 'a', 'd', 'c'};
+
 static int questions_used[NUM_QUESTIONS];
 static int question_number = 1;
 
@@ -50,4 +147,11 @@ bool check_used(int index){
     }
   }
   return false;
+}
+
+void print_choices(int index){
+  char answer_options[4] = {'a', 'b', 'c', 'd'};
+  for(int i = 0; i < 4; i++){
+    printf("%c. %s\n", answer_options[i], multiple_choice_answers[index][i]);
+  }
 }
