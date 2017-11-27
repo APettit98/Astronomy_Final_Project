@@ -3,14 +3,30 @@
 void choose_game_mode();
 
 int main(int argc, char **argv){
+  srand(time(NULL));
 
   if(argc == 1){
     choose_game_mode();
   }
+  else if(argc == 2){
+    if(argv[1][0] == '-' && argv[1][1] == 'n'){
+      standard_multiple_choice_game();
+    }
+    else if(argv[1][0] == '-' && argv[1][1] == 'e'){
+      full_length_multiple_choice_game();
+    }
+    else{
+      printf("Sorry that is not a valid argument.\n");
+      printf("Valid arguments are '-n' for a normal game and"
+             "-e for a full-length game, you can also run the game"
+             "with no additional command-line arguments\n");
+      return 1;
+    }
+  }
+  else{
+    printf("Usage: %s '-n'/'-e'[optional]\n", argv[0]);
+  }
 
-  srand(time(NULL));
-
-  //standard_multiple_choice_game();
 
   return 0;
 }
