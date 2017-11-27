@@ -6,4 +6,4 @@ To create the executable, simply download or clone the repository and run the co
 
 Once the executable is created you can run the game by entering the following command:
 
-'''./astro_trivia'''
+`./astro_trivia`
