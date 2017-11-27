@@ -21,6 +21,16 @@ Doens't return, but prints user's score at the end of the game
 void full_length_multiple_choice_game();
 
 /*
+Function that handles the gameplay of an normal-length random-value multiple
+choice game
+Asks 15 questions and the user can gain or lose a random amout of points
+for each question
+Doesn't return, but prints the user's score at the end of the game
+*/
+void random_multiple_choice_game();
+
+
+/*
 Function that forces the program to stop for a set amount of time
 
 Parameter: seconds - seconds to stop

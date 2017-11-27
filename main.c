@@ -15,16 +15,19 @@ int main(int argc, char **argv){
     else if(argv[1][0] == '-' && argv[1][1] == 'e'){
       full_length_multiple_choice_game();
     }
+    else if(argv[1][0] == '-' && argv[1][1] == 'r'){
+      random_multiple_choice_game();
+    }
     else{
       printf("Sorry that is not a valid argument.\n");
-      printf("Valid arguments are '-n' for a normal game and"
-             "-e for a full-length game, you can also run the game"
-             "with no additional command-line arguments\n");
+      printf("Valid arguments are '-n' for a normal game,"
+             "-e for a full-length game, and -r for a random game"
+              "you can also run the game with no additional command-line arguments\n");
       return 1;
     }
   }
   else{
-    printf("Usage: %s '-n'/'-e'[optional]\n", argv[0]);
+    printf("Usage: %s '-n'/'-e'/'-r'[optional]\n", argv[0]);
   }
 
 
@@ -38,6 +41,7 @@ void choose_game_mode(){
   if(!strcmp(game_choice, "help")){
     printf("Type 'normal' for normal game with 15 multiple choice questions\n");
     printf("Type 'extended' for normal game with all possible multiple choice questions\n");
+    printf("Type 'random' for game with 15 multiple choice questions and random question values\n");
     scanf("%s", &game_choice);
   }
   if(!strcmp(game_choice, "normal")){
@@ -45,6 +49,9 @@ void choose_game_mode(){
   }
   else if(!strcmp(game_choice, "extended")){
     full_length_multiple_choice_game();
+  }
+  else if(!strcmp(game_choice, "random")){
+    random_multiple_choice_game();
   }
   else{
     printf("Sorry, that is not a valid command\n");

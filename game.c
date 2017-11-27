@@ -18,7 +18,6 @@ void standard_multiple_choice_game(){
     printf("Question %i: %s\n", i+1, get_question(index));
     print_choices(index - 1);
     user_answer = get_user_answer();
-    printf("USER ANSWER: %c \n", user_answer);
     is_correct = check_correct(user_answer, index);
     if(is_correct){
       score --;
@@ -29,7 +28,7 @@ void standard_multiple_choice_game(){
       printf("That is correct!\n\n");
     }
   }
-  printf("\n\n\n");
+  printf("\n\n");
   printf("You have completed the game!\n");
   printf("Your final score is %i\n", score);
 }
@@ -52,7 +51,6 @@ void full_length_multiple_choice_game(){
     printf("Question %i: %s\n", i+1, get_question(index));
     print_choices(index - 1);
     user_answer = get_user_answer();
-    printf("USER ANSWER: %c \n", user_answer);
     is_correct = check_correct(user_answer, index);
     if(is_correct){
       score --;
@@ -63,7 +61,43 @@ void full_length_multiple_choice_game(){
       printf("That is correct!\n\n");
     }
   }
-  printf("\n\n\n");
+  printf("\n\n");
+  printf("You have completed the game!\n");
+  printf("Your final score is %i\n", score);
+}
+
+void random_multiple_choice_game(){
+  static int score = 0;
+  printf("Welcome to astro-trivia!\n");
+  printf("You will be asked 15 multiple choice questions\n"
+         "Each question will be worth a random amount of points "
+         "between 1 and 20\n"
+         "You will either gain or lose that many points depending on if you "
+         "answer correctly\n"
+         "Let's begin! Here comes the first question....\n\n\n");
+  char user_answer;
+  int index;
+  bool is_correct;
+  int q_value;
+
+  for(int i = 0; i < 15; i ++){
+    index = get_index();
+    q_value = 1 + rand() % 20;
+    printf("Question %i: %s\n", i+1, get_question(index));
+    print_choices(index - 1);
+    printf("This question is worth %i points\n", q_value);
+    user_answer = get_user_answer();
+    is_correct = check_correct(user_answer, index);
+    if(is_correct){
+      score -= q_value;
+      printf("Sorry... That was the wrong answer\n\n");
+    }
+    else{
+      score += q_value;
+      printf("That is correct!\n\n");
+    }
+  }
+  printf("\n\n");
   printf("You have completed the game!\n");
   printf("Your final score is %i\n", score);
 }
