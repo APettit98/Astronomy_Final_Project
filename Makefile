@@ -1,4 +1,4 @@
-CFLAGS=-Wall -std=c99
+CFLAGS=-w -std=c99
 
 astro_trivia: game.o questions.o main.o
 	gcc $(CFLAGS) game.o questions.o main.o -o astro_trivia
