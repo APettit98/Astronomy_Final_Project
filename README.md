@@ -1,6 +1,8 @@
 # Astronomy_Final_Project
 A command-line astronomy trivia game for my Astronomy of the Solar System final project
 
+This project is based on a MacOS terminal, and to use the makefile the user should have the Xtools command line installed
+
 ## Usage
 To create the executable, simply download or clone the repository and run the command 'make' in the directory of the repository
 
