@@ -7,6 +7,7 @@ void standard_multiple_choice_game(){
   printf("To answer, type the letter choice of your answer and press enter\n");
   printf("You will receive ten points for every correct answer and you will");
   printf("lose one point for every incorrect answer\n");
+  printf("Sol refers to the sun and Luna refers to Earth's moon\n");
   printf("Let's begin! Here comes the first question....\n\n\n");
 
   char user_answer;
@@ -41,6 +42,7 @@ void full_length_multiple_choice_game(){
   printf("To answer, type the letter choice of your answer and press enter\n");
   printf("You will receive ten points for every correct answer and you will");
   printf("lose one point for every incorrect answer\n");
+  printf("Sol refers to the sun and Luna refers to Earth's moon\n");
   printf("Let's begin! Here comes the first question....\n\n\n");
 
   char user_answer;
@@ -76,6 +78,7 @@ void random_multiple_choice_game(){
          "between 1 and 20\n"
          "You will either gain or lose that many points depending on if you "
          "answer correctly\n"
+         "Sol refers to the sun and Luna refers to Earth's moon\n"
          "Let's begin! Here comes the first question....\n\n\n");
   char user_answer;
   int index;
