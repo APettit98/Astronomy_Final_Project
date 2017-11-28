@@ -36,9 +36,9 @@ char questions[NUM_QUESTIONS][MAX_Q_LENGTH] =
    "Which planet in our solar system is the second farthest from Sol?",
    "Which planet in our solar system is the third farthest from Sol?",
    "Which planet in our solar system is the fourth farthest from Sol?",
-   "Which four planets are the terrestrials?",
-   "Which four planets are the jovians?",
-   "What is the nickname of the jovian planets?",
+   "Which four planets are the Terrestrials?",
+   "Which four planets are the Jovians?",
+   "What is the nickname of the Jovian planets?",
    "For (non-planetary) astronomers, what catagories can all elements be broken into?",
    "For planetary astronomers, what catagories can all elements be broken into?"
   };
@@ -342,6 +342,10 @@ bool check_correct(char answer, int index){
   else{
     return true;
   }
+}
+
+char get_correct_answer(int index){
+  return correct_multiple_choice_answers[index - 1];
 }
 
 void print_choices(int index){

@@ -32,6 +32,14 @@ Parameter: index - index of question being checked
 bool check_used(int index);
 
 /*
+Function that returns the character of the correct answer of a question
+at a particular index
+
+Paramter: index - index of question whose answer is returned
+*/
+char get_correct_answer(int index);
+
+/*
 Function that checks if a multiple choice answer is correct
 
 Paramters: answer - user's answer to the question

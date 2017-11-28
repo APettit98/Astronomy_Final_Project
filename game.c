@@ -21,7 +21,8 @@ void standard_multiple_choice_game(){
     is_correct = check_correct(user_answer, index);
     if(is_correct){
       score --;
-      printf("Sorry... that was the wrong answer\n\n");
+      printf("Sorry... that was the wrong answer\n");
+      printf("The correct answer was: %c\n\n", get_correct_answer(index));
     }
     else{
       score += 10;
@@ -54,7 +55,8 @@ void full_length_multiple_choice_game(){
     is_correct = check_correct(user_answer, index);
     if(is_correct){
       score --;
-      printf("Sorry... that was the wrong answer\n\n");
+      printf("Sorry... that was the wrong answer\n");
+      printf("The correct answer was: %c\n\n", get_correct_answer(index));
     }
     else{
       score += 10;
@@ -90,7 +92,8 @@ void random_multiple_choice_game(){
     is_correct = check_correct(user_answer, index);
     if(is_correct){
       score -= q_value;
-      printf("Sorry... That was the wrong answer\n\n");
+      printf("Sorry... That was the wrong answer\n");
+      printf("The correct answer was: %c\n\n", get_correct_answer(index));
     }
     else{
       score += q_value;
