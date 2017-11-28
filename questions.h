@@ -1,7 +1,7 @@
 #ifndef QUESTIONS
 #define QUESTIONS
 
-#define NUM_QUESTIONS 15
+#define NUM_QUESTIONS 40
 #define MAX_Q_LENGTH 200
 #define NUM_CHOICES 4
 #include <stdlib.h>
