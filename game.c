@@ -33,6 +33,7 @@ void standard_multiple_choice_game(){
   printf("\n\n");
   printf("You have completed the game!\n");
   printf("Your final score is %i\n", score);
+
 }
 
 void full_length_multiple_choice_game(){
@@ -40,7 +41,7 @@ void full_length_multiple_choice_game(){
   printf("Welcome to astro-trivia!\n");
   printf("You will be asked all %i multiple choice questions\n", NUM_QUESTIONS);
   printf("To answer, type the letter choice of your answer and press enter\n");
-  printf("You will receive ten points for every correct answer and you will");
+  printf("You will receive ten points for every correct answer and you will ");
   printf("lose one point for every incorrect answer\n");
   printf("Sol refers to the sun and Luna refers to Earth's moon\n");
   printf("Let's begin! Here comes the first question....\n\n\n");
