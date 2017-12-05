@@ -40,7 +40,27 @@ char questions[NUM_QUESTIONS][MAX_Q_LENGTH] =
    "Which four planets are the Jovians?",
    "What is the nickname of the Jovian planets?",
    "For (non-planetary) astronomers, what catagories can all elements be broken into?",
-   "For planetary astronomers, what catagories can all elements be broken into?"
+   "For planetary astronomers, what catagories can all elements be broken into?",
+   "What is the name of the mission that resulted in the first humans on the moon?",
+   "Approximately how many Earth days is one year on Venus?",
+   "Which Martian moon is slowly spiralling towards the planet?",
+   "What was the first spacecraft to exit the solar system?",
+   "How were messages to extra-terrestrials stored on the Voyager spacecraft?",
+   "What is the largest Galilean sattelite of Jupiter?",
+   "Which Galilean sattelite of Jupiter is known for its volanic activity?",
+   "Which Galilean sattelite of Jupiter is relatively smoother than a billiard ball?",
+   "Which Galilean sattelite of Jupiter is not in an orbital resonance with the others?",
+   "Approximately how thick are Saturn's rings?",
+   "Which moon of Saturn is 'the Death Star moon'?",
+   "The Cassini spacecraft flew through the saltwater plumes of which moon?",
+   "Who discovered Uranus?",
+   "How many Earth years is one Uranian year?",
+   "Which planet was discovered using pencil and paper?",
+   "Who used pencil and paper to predict the existence of Neptune?"
+   "Where was Neptune first seen through a telescope?",
+   "What is the largerst moon of Neptune?",
+   "In what year was Pluto discovered?",
+   "In what year was Charon discovered?"
   };
 char answers[NUM_QUESTIONS][MAX_Q_LENGTH] =
   {"Eratosthenes", "Aristarchus", "Aristarchus", "1/2 degree",
@@ -57,7 +77,10 @@ char answers[NUM_QUESTIONS][MAX_Q_LENGTH] =
    "Every 12.5 hours", "Mercury","Vensus", "Earth", "Mars", "8", "Mercury",
    "Jupiter", "Neptune", "Uranus", "Saturn", "Jupiter",
    "Mercury, Venus, Earth, Mars", "Jupiter, Saturn, Uranus, Neptune",
-   "Gas Giants", "Gases and Metals", "Gases, Ices, Rocks, Metals"};
+   "Gas Giants", "Gases and Metals", "Gases, Ices, Rocks, Metals", "Apollo",
+   "240", "Phobos", "Voyager 1", "Records", "Ganymede", "Io", "Europa",
+   "Callisto", "20 m", "Mimas", "Enceladus", "Herschel", "84", "Neptune",
+   "LeVerrier", "Berlin", "Triton", "1930", "1978"};
 
 char multiple_choice_answers[NUM_QUESTIONS][MAX_Q_LENGTH][NUM_CHOICES][MAX_Q_LENGTH] =
   {
@@ -300,13 +323,128 @@ char multiple_choice_answers[NUM_QUESTIONS][MAX_Q_LENGTH][NUM_CHOICES][MAX_Q_LEN
       {"Gases, Ices, Rocks, Metals"},
       {"Waters, Lavas, Metals, Non-metals"},
       {"Conductors, Insulators, Neutrals, Gases"}
+    },
+    {
+      {"Pluto"},
+      {"Voyager"},
+      {"Apollo"},
+      {"Cassini"}
+    },
+    {
+      {"1"},
+      {"120"},
+      {"360"},
+      {"240"}
+    },
+    {
+      {"Phobos"},
+      {"Luna"},
+      {"Deimos"},
+      {"Titan"}
+    },
+    {
+      {"Voyager 1"},
+      {"Voyager 2"},
+      {"Apollo"},
+      {"Cassini"}
+    },
+    {
+      {"Plaques"},
+      {"Records"},
+      {"CDs"},
+      {"Computer Hard-drive"}
+    },
+    {
+      {"Io"},
+      {"Europa"},
+      {"Ganymede"},
+      {"Callisto"}
+    },
+    {
+      {"Io"},
+      {"Europa"},
+      {"Ganymede"},
+      {"Callisto"}
+    },
+    {
+      {"Io"},
+      {"Europa"},
+      {"Ganymede"},
+      {"Callisto"}
+    },
+    {
+      {"Io"},
+      {"Europa"},
+      {"Ganymede"},
+      {"Callisto"}
+    },
+    {
+      {"20 km"},
+      {"20 m"},
+      {"20 mi"},
+      {"20 cm"}
+    },
+    {
+      {"Titan"},
+      {"Luna"},
+      {"Mimas"},
+      {"Charon"}
+    },
+    {
+      {"Enceladus"},
+      {"Luna"},
+      {"Titan"},
+      {"Europa"}
+    },
+    {
+      {"Galileo"},
+      {"LeVerrier"},
+      {"Herschel"},
+      {"Unknown"}
+    },
+    {
+      {"1"},
+      {"84"},
+      {"100"},
+      {"68"}
+    },
+    {
+      {"Jupiter"},
+      {"Neptune"},
+      {"Uranus"},
+      {"Saturn"}
+    },
+    {
+      {"Galileo"},
+      {"LeVerrier"},
+      {"Herschel"},
+      {"Unknown"}
+    },
+    {
+      {"Paris"},
+      {"London"},
+      {"Antarctica"},
+      {"Berlin"}
+    },
+    {
+      {"Triton"},
+      {"Titan"},
+      {"Ganymede"},
+      {"Charon"}
+    },
+    {
+      {"1978"},
+      {"1960"},
+      {"1930"},
+      {"1880"}
     }
   };
 
 char correct_multiple_choice_answers[NUM_QUESTIONS] =
   {'a','c','d','b','c','a','b','c','d','c','a','b','a','d','c',
    'a','a','b','d','b','d','c','a','b','d','a','b','c','d','d',
-   'a','b','c','d','a','b','c','d','a','b'};
+   'a','b','c','d','a','b','c','d','a','b','c','d','a','a','b',
+   'c','a','b','d','b','c','a','c','b','b','b','d','a','c','a'};
 
 static int questions_used[NUM_QUESTIONS];
 static int question_number = 1;
