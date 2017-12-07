@@ -56,11 +56,26 @@ char questions[NUM_QUESTIONS][MAX_Q_LENGTH] =
    "Who discovered Uranus?",
    "How many Earth years is one Uranian year?",
    "Which planet was discovered using pencil and paper?",
-   "Who used pencil and paper to predict the existence of Neptune?"
+   "Who used pencil and paper to predict the existence of Neptune?",
    "Where was Neptune first seen through a telescope?",
    "What is the largerst moon of Neptune?",
    "In what year was Pluto discovered?",
-   "In what year was Charon discovered?"
+   "In what year was Charon discovered?",
+   "Which planet 'spins on its side'?",
+   "Which moon has solid air?",
+   "Pluto is in a 3:2 orbital resonance with which planet?",
+   "Which mission sent a spacecraft to take pictures of Pluto?",
+   "What is the name of Pluto's moon?",
+   "What tool did Tombaugh use to discover Pluto?",
+   "When we say a body has a 'rocky core' what type of element are we usually talking about?",
+   "Earth is the most ________ - like planet in the solar system.",
+   "Which moon of Saturn tumbles chaotically?",
+   "What is the name of the crater on Mimas?",
+   "What did Herschel name the planet we now know as Uranus?",
+   "Which Voyager mission went above the plane of the ecliptic?",
+   "Which side of Mars has harsh winters?",
+   "What is the name of the best theory of the origin of the Earth-Luna 'double planet'?",
+   "Who was the commander of the Apollo 11 mission?"
   };
 char answers[NUM_QUESTIONS][MAX_Q_LENGTH] =
   {"Eratosthenes", "Aristarchus", "Aristarchus", "1/2 degree",
@@ -80,7 +95,10 @@ char answers[NUM_QUESTIONS][MAX_Q_LENGTH] =
    "Gas Giants", "Gases and Metals", "Gases, Ices, Rocks, Metals", "Apollo",
    "240", "Phobos", "Voyager 1", "Records", "Ganymede", "Io", "Europa",
    "Callisto", "20 m", "Mimas", "Enceladus", "Herschel", "84", "Neptune",
-   "LeVerrier", "Berlin", "Triton", "1930", "1978"};
+   "LeVerrier", "Berlin", "Triton", "1930", "1978", "Uranus", "Triton",
+   "Neptune", "New Horizon", "Charon", "Blink Comparator", "Silicates", "Titan",
+   "Hyperion", "Herschel", "Georgium Sidius", "Voyager 1", "South", "Big Splash",
+   "Neil Armstrong"};
 
 char multiple_choice_answers[NUM_QUESTIONS][MAX_Q_LENGTH][NUM_CHOICES][MAX_Q_LENGTH] =
   {
@@ -437,6 +455,102 @@ char multiple_choice_answers[NUM_QUESTIONS][MAX_Q_LENGTH][NUM_CHOICES][MAX_Q_LEN
       {"1960"},
       {"1930"},
       {"1880"}
+    },
+    {
+      {"1978"},
+      {"1960"},
+      {"1930"},
+      {"1880"}
+    },
+    {
+      {"Jupiter"},
+      {"Neptune"},
+      {"Uranus"},
+      {"Saturn"}
+    },
+    {
+      {"Triton"},
+      {"Titan"},
+      {"Ganymede"},
+      {"Charon"}
+    },
+    {
+      {"Jupiter"},
+      {"Neptune"},
+      {"Uranus"},
+      {"Saturn"}
+    },
+    {
+      {"New Horizon"},
+      {"Voyager"},
+      {"Apollo"},
+      {"Cassini"}
+    },
+    {
+      {"Phobos"},
+      {"Luna"},
+      {"Deimos"},
+      {"Charon"}
+    },
+    {
+      {"Blink Comparator"},
+      {"Sextant"},
+      {"Protractor"},
+      {"Sun Dial"}
+    },
+    {
+      {"Noble Gases"},
+      {"Sulfur Compounds"},
+      {"Silicates"},
+      {"Metals"}
+    },
+    {
+      {"Mars"},
+      {"Titan"},
+      {"Triton"},
+      {"Jupiter"}
+    },
+    {
+      {"Triton"},
+      {"Titan"},
+      {"Charon"},
+      {"Hyperion"}
+    },
+    {
+      {"Herschel"},
+      {"LeVerrier"},
+      {"George"},
+      {"Luke"}
+    },
+    {
+      {"Herschel"},
+      {"The Queen's Planet"},
+      {"Georgium Sidius"},
+      {"Juno"}
+    },
+    {
+      {"Voyager 1"},
+      {"Voyager 2"},
+      {""},
+      {""}
+    },
+    {
+      {"North"},
+      {"South"},
+      {"East"},
+      {"West"}
+    },
+    {
+      {"Fission"},
+      {"Capture"},
+      {"Co-accretion"},
+      {"Big Splash"}
+    },
+    {
+      {"Mike Collins"},
+      {"Buzz Aldrin"},
+      {"Neil Armstrong"},
+      {"Charlie Duke"}
     }
   };
 
@@ -444,7 +558,8 @@ char correct_multiple_choice_answers[NUM_QUESTIONS] =
   {'a','c','d','b','c','a','b','c','d','c','a','b','a','d','c',
    'a','a','b','d','b','d','c','a','b','d','a','b','c','d','d',
    'a','b','c','d','a','b','c','d','a','b','c','d','a','a','b',
-   'c','a','b','d','b','c','a','c','b','b','b','d','a','c','a'};
+   'c','a','b','d','b','c','a','c','b','b','b','d','a','c','a',
+   'c','a','b','a','d','a','c','b','d','a','c','a','b','d','c'};
 
 static int questions_used[NUM_QUESTIONS];
 static int question_number = 1;
